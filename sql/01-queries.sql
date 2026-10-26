@@ -2,7 +2,7 @@
 -- 각 TODO 아래에 완성한 SQL을 저장하고, 한 문장씩 실행하세요.
 
 -- TODO 05 [과제 4]: 영화 101의 userId, memo만 조회. 기대: 3행(행 순서는 무관).
-SELECT *
+SELECT userId, memo
 FROM favorites
 WHERE movieId = '101';
 
