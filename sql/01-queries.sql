@@ -2,14 +2,29 @@
 -- 각 TODO 아래에 완성한 SQL을 저장하고, 한 문장씩 실행하세요.
 
 -- TODO 05 [과제 4]: 영화 101의 userId, memo만 조회. 기대: 3행(행 순서는 무관).
+SELECT *
+FROM favorites
+WHERE movieId = '101';
 
 -- TODO 06 [과제 4]: AND로 user-a와 영화 104 조건을 연결해 memo만 조회.
 -- 기대: '가족과 볼 영화' 1행.
+SELECT memo
+FROM favorites
+WHERE userId = 'user-a' AND movieId = '104';
 
 -- TODO 07 [과제 4]: user-c의 movieId, memo를 영화 ID 내림차순으로 정렬해 1건 조회.
 -- 기대: movieId 103, '다시 보고 싶은 영화'.
+SELECT movieId, memo
+FROM favorites
+WHERE userId = 'user-c'
+ORDER BY movieId DESC
+LIMIT 1;
 
 -- TODO 08 [과제 4]: TODO 07에서 LIMIT만 제외한 별도 SQL. 기대: 103 → 101 두 행.
+SELECT movieId, memo
+FROM favorites
+WHERE userId = 'user-c'
+ORDER BY movieId DESC;
 
 -- TODO 14 [과제 7]: JOIN으로 빈 메모의 favorites.userId, movies.title, favorites.memo 조회.
 -- favorites.movieId와 movies.id가 같은 행끼리 연결. favorites.id 오름차순.
