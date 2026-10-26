@@ -2,6 +2,7 @@
 export const dynamic = "force-dynamic";
 
 import MovieCard from "@/components/MovieCard";
+import FavoriteList from "@/components/FavoriteList";
 import { getPopularMovies } from "@/lib/tmdb";
 
 export default async function MoviesPage() {
@@ -9,13 +10,11 @@ export default async function MoviesPage() {
 
   return (
     <main>
+      <FavoriteList />
       <h1>인기 영화</h1>
 
       {data.results.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          movie={movie}
-        />
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </main>
   );
