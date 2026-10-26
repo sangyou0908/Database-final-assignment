@@ -26,6 +26,10 @@ app.get("/api/favorites", (req, res) => {
 
 // TODO 18 [과제 8]: /api/favorite-count의 GET 요청을 등록하고
 // favoriteCount 속성을 가진 객체를 응답하세요. 값은 favorites.length로 계산합니다.
+app.get("/api/favorite-count", (req, res) => {
+  const favoriteCount = favorites.length;
+  res.json({ favoriteCount });
+});
 
 // TODO 전에는 /만 응답하며, 두 /api 경로의 Cannot GET(404)은 정상적인 미완성 상태입니다.
 app.listen(4000, () => {
