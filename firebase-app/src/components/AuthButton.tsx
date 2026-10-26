@@ -50,7 +50,7 @@ export default function AuthButton() {
             userId: data.userId,
             movieId: data.movieId,
             // TODO 04 [과제 2]: data.memo가 null/undefined이면 ??로 빈 문자열을 사용하세요.
-            memo: "",
+            memo: data.memo ?? "",
           };
         });
         // TODO 02 [과제 1]: setFavorites()로 favoriteList를 Store에 반영하세요.
