@@ -25,7 +25,7 @@ export default function AuthButton() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       // TODO 01 [과제 1]: currentUser를 setUser()에 전달하세요.
       // 아래 void 문은 미완성 상태의 자리표시자입니다. 구현하면서 제거하세요.
-      void currentUser;
+      setUser(currentUser);
     });
     return unsubscribe;
   }, [setUser]);
