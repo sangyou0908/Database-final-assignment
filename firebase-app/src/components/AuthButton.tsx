@@ -55,7 +55,7 @@ export default function AuthButton() {
         });
         // TODO 02 [과제 1]: setFavorites()로 favoriteList를 Store에 반영하세요.
         // 인자는 다음 배열을 반환하는 함수입니다. 아래 자리표시자는 제거하세요.
-        void favoriteList;
+        setFavorites(() => favoriteList);
       } catch (error) {
         console.error(error);
       }
